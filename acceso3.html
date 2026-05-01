@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso Oficial 3</title>
+    <style>
+        body { 
+            background-color: #cccccc; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0;
+        }
+
+        .contenedor-maestro {
+            background-image: url('fondo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 594px;
+            height: 718px;
+            position: relative;
+        }
+
+        .encima {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            padding: 24px;
+            box-sizing: border-box;
+            font-size: 20px;
+            border-radius: 8px;
+            border: 1px solid #999;
+        }
+
+        .encima:focus {
+            outline: 2px solid #42A5F5;
+        }
+
+        #rut { 
+            top: 306px; 
+        }
+
+        #nombre_apellido { 
+            top: 431px; 
+        }
+        
+        .boton { 
+            top: 557px; 
+            background-color: #2196F3; 
+            color: white; 
+            border: none; 
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 18px; 
+            width: 65%;
+        }
+        
+        .boton:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-maestro">
+        <input type="text" id="rut" class="encima" value="24.965.626-7" style="display:none;">
+        <input type="text" id="nombre_apellido" class="encima" placeholder="Nombre y Apellido">
+        
+        <button class="encima boton" onclick="ir()">Autenticar</button>
+    </div>
+
+    <script>
+        function ir() {
+            var n = document.getElementById('nombre_apellido').value;
+
+            if (n == "") { 
+                alert("Por favor, completa el nombre"); 
+            } else { 
+                // AQUÍ SE AGREGA EL NUEVO VÍNCULO DEL DRIVE DE ESTA PERSONA
+                window.location.href = "https://drive.google.com/file/d/1efVdf0e0K9QBcvO7oGvBfiL8GzwI0EJN/view?usp=sharing"; 
+            }
+        }
+    </script>
+
+</body>
+</html>
