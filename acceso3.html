@@ -35,14 +35,6 @@
             border: 1px solid #999;
         }
 
-        .encima:focus {
-            outline: 2px solid #42A5F5;
-        }
-
-        #rut { 
-            top: 306px; 
-        }
-
         #nombre_apellido { 
             top: 431px; 
         }
@@ -67,7 +59,6 @@
 <body>
 
     <div class="contenedor-maestro">
-        <input type="text" id="rut" class="encima" value="24.965.626-7" style="display:none;">
         <input type="text" id="nombre_apellido" class="encima" placeholder="Nombre y Apellido">
         
         <button class="encima boton" onclick="ir()">Autenticar</button>
@@ -78,10 +69,10 @@
             var n = document.getElementById('nombre_apellido').value;
 
             if (n == "") { 
-                alert("Por favor, completa el nombre"); 
+                alert("Por favor, completa los datos requeridos"); 
             } else { 
-                // AQUÍ SE AGREGA EL NUEVO VÍNCULO DEL DRIVE DE ESTA PERSONA
-                window.location.href = "https://drive.google.com/file/d/1efVdf0e0K9QBcvO7oGvBfiL8GzwI0EJN/view?usp=sharing"; 
+                // Vínculo independiente para el acceso de esta persona
+                window.location.href = "https://drive.google.com/file/d/15sxznim_HS6x0UN9jAoqZxBROERpE0YT/view?usp=sharing"; 
             }
         }
     </script>
